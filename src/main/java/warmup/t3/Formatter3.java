@@ -7,14 +7,12 @@ public class Formatter3 extends Formatter0 {
     Formatter3(String s){
         super(s);
         StringBuilder builder = new StringBuilder();
-        for (int i = 0; i < 10; i++) {
-            for (int j = 0; j < 3; j++) {
-                if(i == 0 || i == 9 || j == 0 || j == 2){
-                    builder.append("*");
-                }
-            }
-        }
-        s = builder.toString();
+        builder.append("**********\n");
+        builder.append("  *   ");
+        builder.append(s);
+        builder.append("   *\n");
+        builder.append("  **********\n");
+        this.s = builder.toString();
     }
 
     @Override
